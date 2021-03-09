@@ -13,7 +13,6 @@ export default function MovieInfo(props) {
                 method: 'GET',
                 url: `${process.env.REACT_APP_TMDB_BASE_URL}/movie/${movieID}?api_key=${process.env.REACT_APP_TMDB_API_KEY}`
             })
-            const { title, tagline, overview, poster_path, release_date} = response.data;
             setMovieInfo(response.data);
         })()
     })
