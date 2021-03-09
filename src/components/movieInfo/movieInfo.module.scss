@@ -11,10 +11,28 @@
   position: absolute;
   top: 0;
   left: 0;
-  @include flexBox(center, center);
-}
+  //@include flexBox(center, center);
 
-.sofiaStupid {
-  color: red;
-  font-size: 3em;
+  .movieData {
+    @include flexBox(flex-start, flex-end);
+
+    .movieImage {
+      max-height: 700px;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .movieText {
+      position: absolute;
+      padding: 6rem;
+      font-size: 2em;
+    }
+  }
 }

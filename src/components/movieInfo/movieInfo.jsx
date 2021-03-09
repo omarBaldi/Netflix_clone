@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Styles from './movieInfo.module.scss';
 
 export default function MovieInfo(props) {
-    const movieID = props.match.path.split('/').pop();
 
+    const movieID = props.match.path.split('/').pop();
     const [movieInfo, setMovieInfo] = useState(null);
 
     useEffect(() => {
@@ -21,12 +21,16 @@ export default function MovieInfo(props) {
         <div className={Styles.movieSelected}>
             {
                 movieInfo && 
-                <div>
-                    <p>{movieInfo.title}</p>
-                    <p>{movieInfo.tagline}</p>
-                    <p>{movieInfo.overview}</p>
-                    <p>{movieInfo.release_date}</p>
-                    <img src={`https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`} alt="" />
+                <div className={Styles.movieData}>
+                    <div className={Styles.movieImage}>
+                        <img src={`https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`} alt="" />
+                    </div>
+                    <div className={Styles.movieText}>
+                        <p>{movieInfo.title}</p>
+                        <p>{movieInfo.tagline}</p>
+                        <p>{movieInfo.overview}</p>
+                        <p>{movieInfo.release_date}</p>
+                    </div>
                 </div>
             }
         </div>
