@@ -11,15 +11,3 @@
     display: none;
   }
 }
-
-.movie {
-  width: 100%;
-  max-height: 250px;
-  margin-right: 10px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  &:hover {
-    transform: scale(1.2);
-  }
-}

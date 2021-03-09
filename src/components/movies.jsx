@@ -1,6 +1,6 @@
 import React from 'react';
 import MoviesRequests from '../movieRequests';
-import MoviesRow from '../components/moviesRow/moviesRow';
+import MoviesRow from './moviesRow/moviesRow';
 
 export default function Movies() {
     return (
