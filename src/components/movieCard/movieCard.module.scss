@@ -1,9 +1,7 @@
 .movie {
-  max-height: 250px;
-  max-width: 300px;
-  margin-right: 10px;
+  max-width: 400px;
   object-fit: cover;
-  cursor: pointer;
+  //cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover {
     transform: scale(1.2);

@@ -4,7 +4,7 @@ import Styles from './movieInfo.module.scss';
 
 export default function MovieInfo(props) {
 
-    const movieID = props.match.path.split('/').pop();
+    const movieID = props.match?.params?.id;
     const [movieInfo, setMovieInfo] = useState(null);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function MovieInfo(props) {
             })
             setMovieInfo(response.data);
         })()
-    })
+    }, [movieID])
 
     return (
         <div className={Styles.movieSelected}>

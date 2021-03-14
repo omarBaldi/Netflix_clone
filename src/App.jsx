@@ -1,16 +1,17 @@
 import Movies from './components/movies';
+import Styles from './App.module.scss';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+import MovieSelected from '../src/components/movieInfo/movieInfo';
 
 function App() {
   return (
-    <div>
+    <div className={Styles.mainWrapper}>
       <Router>
         <Movies />
+        <Route exact path="/movie/:id" component={MovieSelected} />
       </Router>
     </div>
   );

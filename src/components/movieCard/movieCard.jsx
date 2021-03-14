@@ -1,7 +1,6 @@
-import React, {} from 'react';
+import React from 'react';
 import Styles from './movieCard.module.scss';
-import { Link, Route } from 'react-router-dom';
-import MovieSelected from '../movieInfo/movieInfo';
+import { Link } from 'react-router-dom';
 
 export default function MovieCard({ id, title, backdrop_path }) {
     return (
@@ -14,7 +13,6 @@ export default function MovieCard({ id, title, backdrop_path }) {
                 />
                 <p>{title}</p>
             </Link>
-            <Route exact path={`/movie/${id}`} component={MovieSelected} />
         </div>
     )
 }
