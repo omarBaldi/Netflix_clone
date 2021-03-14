@@ -33,12 +33,12 @@ export default function MoviesRow({ title, url }) {
             <div className={Styles.movies__row}>
                 <Swiper 
                     spaceBetween={20} 
-                    slidesPerView={4} 
+                    slidesPerView={3} 
                     freeMode={true} 
                     grabCursor={true}
                     navigation
-                    autoplay={{ delay: 3000 }}
-                    //navigation={{ nextEl: nextButton, prevEl: prevButton }}
+                    pagination
+                    autoplay={{ delay: 4000 }}
                 >
                     {
                         rowMovies.map((movie, index) => {
